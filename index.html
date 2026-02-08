@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voyage Travel Agency</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== BASIC RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+  color: #333;
+}
+
+/* ===== HERO ===== */
+header {
+  height: 90vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+header h1 {
+  font-size: 48px;
+  animation: slideDown 1.5s;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 20px;
+  animation: slideUp 1.5s;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 45px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.desc {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===== DESTINATIONS ===== */
+.destinations {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: zoomIn 1.2s;
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 10px;
+}
+
+.card p {
+  padding: 0 10px 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* ===== FORM ===== */
+.form-box {
+  background: #fff;
+  max-width: 480px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: slideUp 1.5s;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 9px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 11px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fd1;
+}
+
+.error {
+  font-size: 13px;
+  color: red;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.9); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+/* ===== ABOUT ===== */
+.about{background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border-radius:25px;padding:60px 40px;text-align:center;box-shadow:0 12px 35px rgba(0,0,0,0.2);animation:fadeUp 1.5s ease;}
+.about img{width:180px;border-radius:50%;margin-bottom:20px;border:5px solid #1e90ff;transition:.5s;}
+.about img:hover{transform:rotate(10deg) scale(1.1);}
+.about p{max-width:900px;margin:auto;line-height:1.8;font-size:16px;color:#111;}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+  <div>
+    <h1>Voyage Travel Agency</h1>
+    <p>Plan smart. Travel far. Experience more ✈️</p>
+  </div>
+</header>
+
+<!-- ABOUT -->
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about">
+    
+    <h2>About Us</h2>
+    <p><p>Voyage Travel Agency is dedicated to creating unforgettable travel experiences
+for individuals, families, and groups. We carefully design travel packages that
+combine comfort, affordability, and adventure. From booking flights and hotels
+to guided tours and local experiences, we handle every detail of your journey.
+Our experienced travel experts ensure safe planning, transparent pricing, and
+24/7 customer support. With Voyage, you don’t just travel — you travel with confidence.
+</p>
+</p>
+  </div>
+</section>
+
+
+
+<!-- DESTINATIONS -->
+<section>
+<h2>Popular Destinations</h2>
+
+<div class="destinations">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+    <h3>Paris, France</h3>
+    <p>Romantic streets, world-famous landmarks, and rich cultural heritage.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1548013146-72479768bada">
+    <h3>Bali, Indonesia</h3>
+    <p>Relax on tropical beaches and explore peaceful temples.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1">
+    <h3>Dubai, UAE</h3>
+    <p>Luxury lifestyle, modern architecture, and desert adventures.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+    <h3>Switzerland</h3>
+    <p>Snowy mountains, scenic railways, and breathtaking views.</p>
+  </div>
+</div>
+</section>
+
+<!-- BOOKING -->
+<section>
+<h2>Book Your Trip</h2>
+
+<div class="form-box">
+<form id="bookingForm">
+
+<label>Name</label>
+<input type="text" id="name">
+<div class="error" id="nameError"></div>
+
+<label>Email</label>
+<input type="email" id="email">
+<div class="error" id="emailError"></div>
+
+<label>Destination</label>
+<select id="destination">
+  <option value="">Select Destination</option>
+  <option>Paris</option>
+  <option>Bali</option>
+  <option>Dubai</option>
+  <option>Switzerland</option>
+</select>
+<div class="error" id="destinationError"></div>
+
+<label>Travel Date</label>
+<input type="date" id="date">
+<div class="error" id="dateError"></div>
+
+<button type="submit">Confirm Booking</button>
+
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Voyage Travel Agency | Travel Smart
+</footer>
+
+<!-- SIMPLE JS VALIDATION -->
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let valid = true;
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let destination = document.getElementById("destination").value;
+  let date = document.getElementById("date").value;
+
+  document.querySelectorAll(".error").forEach(e => e.innerHTML = "");
+
+  if (name === "") {
+    document.getElementById("nameError").innerHTML = "Name required";
+    valid = false;
+  }
+
+  if (email === "") {
+    document.getElementById("emailError").innerHTML = "Email required";
+    valid = false;
+  }
+
+  if (destination === "") {
+    document.getElementById("destinationError").innerHTML = "Select destination";
+    valid = false;
+  }
+
+  if (date === "") {
+    document.getElementById("dateError").innerHTML = "Select date";
+    valid = false;
+  }
+
+  if (valid) {
+    alert("🎉 Booking confirmed! We will contact you shortly.");
+    this.reset();
+  }
+});
+</script>
+
+</body>
+</html>
